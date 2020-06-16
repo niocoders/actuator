@@ -1,0 +1,83 @@
+<!--左侧导航-->
+<aside class="lyear-layout-sidebar" xmlns:th="http://www.w3.org/1999/html">
+
+    <!-- logo -->
+    <div id="logo" class="sidebar-header">
+        <a th:href="@{/index}"><img src="images/logo-sidebar.png" title="LightYear" alt="LightYear" /></a>
+    </div>
+    <div class="lyear-layout-sidebar-info lyear-scroll">
+
+        <nav class="sidebar-main">
+            <ul class="nav-drawer">
+                <li class="nav-item active"> <a class="multitabs" th:href="@{/main}"><i
+                        class="mdi mdi-home"></i> <span>后台首页</span></a> </li>
+                <li class="nav-item nav-item-has-subnav">
+                    <a href="javascript:void(0)"><i class="mdi mdi-palette"></i> <span>系统管理</span></a>
+                    <ul class="nav nav-subnav">
+                        <li> <a class="multitabs" href="lyear_ui_typography.html">用户管理</a> </li>
+                        <li> <a class="multitabs" href="lyear_ui_grid.html">部门管理</a> </li>
+                        <li> <a class="multitabs" href="lyear_ui_icon.html">权限管理</a> </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-has-subnav">
+                    <a href="javascript:void(0)"><i class="mdi mdi-format-align-justify"></i> <span>系统监控</span></a>
+                    <ul class="nav nav-subnav">
+                        <li> <a class="multitabs" href="lyear_forms_elements.html">基本元素</a> </li>
+                        <li> <a class="multitabs" href="lyear_forms_input_group.html">输入框组</a> </li>
+                        <li> <a class="multitabs" href="lyear_forms_radio.html">单选框</a> </li>
+                        <li> <a class="multitabs" href="lyear_forms_checkbox.html">复选框</a> </li>
+                        <li> <a class="multitabs" href="lyear_forms_switches.html">开关</a> </li>
+                        <li> <a class="multitabs" href="lyear_forms_range.html">范围选择</a> </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-has-subnav">
+                    <a href="javascript:void(0)"><i class="mdi mdi-tools"></i> <span>运维管理</span></a>
+                    <ul class="nav nav-subnav">
+                        <li> <a class="multitabs" href="lyear_utilities_borders.html">边框</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_colors.html">颜色</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_display.html">显示属性</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_flex.html">弹性布局</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_float.html">浮动</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_sizing.html">尺寸</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_spacing.html">间隔</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_stretched_link.html">延伸链接</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_text.html">文本</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_other.html">其他</a> </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-has-subnav">
+                    <a href="javascript:void(0)"><i class="mdi mdi-tools"></i> <span>系统设置</span></a>
+                    <ul class="nav nav-subnav">
+                        <li> <a class="multitabs" href="lyear_utilities_borders.html">主机管理</a> </li>
+                        <li> <a class="multitabs" href="lyear_utilities_colors.html">系统设置</a> </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-has-subnav">
+                    <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> <span>多级菜单</span></a>
+                    <ul class="nav nav-subnav">
+                        <li> <a href="#!">一级菜单</a> </li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="#!">一级菜单</a>
+                            <ul class="nav nav-subnav">
+                                <li> <a href="#!">二级菜单</a> </li>
+                                <li class="nav-item nav-item-has-subnav">
+                                    <a href="#!">二级菜单</a>
+                                    <ul class="nav nav-subnav">
+                                        <li> <a href="#!">三级菜单</a> </li>
+                                        <li> <a href="#!">三级菜单</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <a href="#!">一级菜单</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <th:block th:replace="fragments/main-footer"/>
+    </div>
+
+</aside>
+<!--End 左侧导航-->
+    

@@ -1,0 +1,52 @@
+server:
+  port: 80
+  servlet:
+    session:
+      timeout: 10m #session会话超时时间
+      #指定浏览器中cookie的key值
+      cookie:
+        name: JSESSIONID
+spring:
+  thymeleaf:
+    cache: false #关闭thymeleaf缓存
+    # 数据源配置
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/security?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    #mysql8版本以上驱动包指定新的驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #配置redis
+  redis:
+    port: 6379
+    host: 127.0.0.1
+#  #指定springsession存储为redis
+  session:
+    store-type: REDIS
+  mail:
+    host: smtp.163.com #发送邮件的服务器，笔者这里使用的 QQ 邮件
+    username: llnlgg@163.com
+    password: IFUQGIPRFPJNULFL
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.starttls.enable: true
+    default-encoding: utf-8
+#自定义配置
+actuator:
+  security:
+    authentication:
+      loginPage: /login/page # 响应认证(登录)页面的URL
+      loginProcessingUrl: /login/form # 登录表单提交处理的url
+      usernameParameter: username # 登录表单提交的用户名的属性名
+      passwordParameter: password  # 登录表单提交的密码的属性名
+      staticPaths: # 静态资源 "/dist/**", "/modules/**", "/plugins/**"
+        - /js/**
+        - /css/**
+        - /fonts/**
+        - /images/**
+        - /favicon.ico
+      loginType: REDIRECT # 认证之后 响应的类型：JSON/REDIRECT
+      #  "/code/image","/mobile/page", "/code/mobile"
+      imageCodeUrl: /code/image # 获取图形验证码地址
+      mobileCodeUrl: /code/mobile # 发送手机验证码地址
+      mobilePage: /mobile/page # 前往手机登录页面
+      tokenValiditySeconds: 604800 # 记住我功能有效时长

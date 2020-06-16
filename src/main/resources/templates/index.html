@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragments/head :: public-css"/>
+</head>
+
+<body>
+<div class="lyear-layout-web">
+    <div class="lyear-layout-container">
+        <!--        左侧导航-->
+        <th:block th:replace="fragments/main-sidebar"/>
+        <!--        头部区域-->
+        <th:block th:replace="fragments/main-header"/>
+        <!--        页面主要内容-->
+        <th:block th:replace="fragments/main"/>
+
+    </div>
+</div>
+<!--        公共js-->
+<th:block th:replace="fragments/script"/>
+</body>
+</html>
